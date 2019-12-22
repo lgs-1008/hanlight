@@ -19,7 +19,7 @@ driver.implicitly_wait(2) # 2초만 기다리겠습니다.
 
 driver.get('https://www.hanlight.kr/user/login') #로그인링크
 
-driver.implicitly_wait(2)
+driver.implicitly_wait(2) #인터넷이나 컴퓨터 사양에 맞게 수정. 에러시 5초 정도 잡아주는게 좋음
 
 id = driver.find_element_by_name('id') #아이디와 비밀번호 요소를 찾는 코드
 pw = driver.find_element_by_name('password')
@@ -32,7 +32,7 @@ pw.send_keys(PW)
 
 driver.find_element_by_xpath("//*[@id='root']/div/div/form/button").send_keys(Keys.ENTER) # 입력한 아이디, 비밀번호 전송
 
-time.sleep(2) #로그인 기다리기
+time.sleep(2) #인터넷이나 컴퓨터 사양에 맞게 수정. 에러시 5초 정도 잡아주는게 좋음
 
 try:
     driver.get('https://www.hanlight.kr/meal') #월별 급식을 크롤링 하기 위해 급식탭으로 이동
